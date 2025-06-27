@@ -1,0 +1,146 @@
+/* === Reset and basics === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url('assets/background.jpg'); /* ضع هنا مسار الخلفية */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* === Form Section === */
+#form-section {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+#form-section h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+#playerName, #playerAge {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #222;
+  color: white;
+}
+
+#playerName::placeholder, #playerAge::placeholder {
+  color: #bbb;
+}
+
+#startGame {
+  margin-top: 15px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0984e3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#startGame:disabled {
+  background-color: #636e72;
+  cursor: not-allowed;
+}
+
+/* === Rules Section === */
+details {
+  background-color: rgba(0,0,0,0.6);
+  margin: 30px auto 10px;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: left;
+}
+
+details summary {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+details ul {
+  margin: 15px 0 0 20px;
+  list-style: disc;
+}
+
+details li {
+  margin-bottom: 8px;
+}
+
+details label {
+  display: block;
+  margin-top: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+details input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* === Game Section === */
+.hidden {
+  display: none !important;
+}
+
+#game-section {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: rgba(0,0,0,0.7);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  color: white;
+  text-align: center;
+}
+
+#player-stats span {
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+/* أزرار التنقل */
+#location-buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0984e3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#location-buttons button:hover {
+  background-color: #74b9ff;
+}
+
+

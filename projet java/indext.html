@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JS Skills Arena</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Form Section -->
+  <section id="form-section">
+    <h2>Enter Player Info</h2>
+    <input type="text" id="playerName" placeholder="Enter your name" />
+    <input type="number" id="playerAge" placeholder="Enter your age" />
+    <details style="margin-top:15px;">
+      <summary>📜 Rules to the Game</summary>
+      <ul>
+        <li>🔫 You must choose a weapon from the store.</li>
+        <li>👹 You will fight a monster with your weapon.</li>
+        <li>💰 Earn gold and XP after each fight.</li>
+        <li>❤️ Protect your health or the game ends!</li>
+      </ul>
+    </details>
+    <label style="display:block; margin-top:10px;">
+      <input type="checkbox" id="agreeRules" /> I have read and agree to the rules.
+    </label>
+    <button id="startGame" disabled style="margin-top:10px;">Play Game</button>
+  </section>
+
+  <!-- Game Section -->
+  <section id="game-section" class="hidden">
+    <h2>Welcome, <span id="playerDisplayName"></span>!</h2>
+
+    <!-- Player Stats -->
+    <div id="player-stats">
+      <span>❤️ Health: <span id="healthValue">100</span></span>
+      <span>⭐ XP: <span id="xpValue">0</span></span>
+      <span>💰 Gold: <span id="goldValue">100</span></span>
+      <span id="monsterHealthContainer" style="margin-left: 20px; display:none;">
+        👹 Monster Health: <span id="monsterHealthValue">50</span>
+      </span>
+    </div>
+
+    <!-- Weapon Choice -->
+    <div id="weapon-selection" style="margin-top:15px; display:none;">
+      <label for="weaponChoice">Select Your Weapon:</label>
+      <select id="weaponChoice">
+        <option value="">-- Select Weapon --</option>
+      </select>
+    </div>
+
+    <!-- Location Buttons -->
+    <div id="location-buttons" style="margin-top:15px;">
+      <button id="btn1">Go Store 🛒</button>
+      <button id="btn2">Go Fight 👹</button>
+      <button id="btn3">Sell Items 💰</button>
+      <button id="btn4" style="display: none;"></button>
+    </div>
+
+    <!-- Location Text -->
+    <div id="location-text" style="margin-top: 20px;">
+      <p id="location-description">You are in the town square. Where do you want to go?</p>
+    </div>
+
+    <div style="margin-top: 20px;">
+      <strong>Selected Weapon: </strong>
+      <span id="selectedWeaponLabel">None</span>
+    </div>
+  </section>
+
+  <!-- SweetAlert2 + JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+</body>
+</html>
